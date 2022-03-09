@@ -1,0 +1,23 @@
+{
+  "name": "easy-dev-https",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderB92/easy-dev-https.git"
+  },
+  "keywords": [
+    "local",
+    "https"
+  ],
+  "author": "Alexander Brandstrup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderB92/easy-dev-https/issues"
+  },
+  "homepage": "https://github.com/AlexanderB92/easy-dev-https#readme"
+}
