@@ -1,7 +1,13 @@
-# easy-dev-https
+# Easy-dev-https
 
-Certs included and generated in UBUNTU on WSL with openSSL and some made up authority.
+Certs not included and but can be generated this way:
 
-https://<hostname>:<port> triggers browser complaint, that authority is invalid as expected.
+```
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365
 
-Passphrase for pem is intentionally added.
+```
+
+I used openssl included with UBUNTU on WSL. Neat. :astronaut:
+
+!Important 1: Browser will complain about the authority, if it is made up.
+!Important 2: Set passphrase in the config 
