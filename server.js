@@ -1,21 +1,25 @@
 const https = require('https');
 const fs = require('fs');
 
-var testFile = fs.readFileSync("files/selfsignedkey.pem");
+//Put in env as usual
+const certPath = "files/selfsignedcert.pem";
+const keyPath = "files/selfsignedkey.pem";
+const passphrase = "<passphrase here>";
+const PORT = 5050;
 
-console.log(testFile);
-
+//Config
 const options = {
-    key: fs.readFileSync("files/selfsignedkey.pem"),
-    passphrase: "selfsign",
-    cert: fs.readFileSync("files/selfsignedcert.pem")
+    key: fs.readFileSync(keyPath),
+    cert: fs.readFileSync(certPath),
+    passphrase: passphrase,
+    PORT: PORT
 }
 
-const PORT = 5050;
+
 
 https.createServer(options, (req,res) => {
     res.writeHead(200);
     res.end("https test");
-}).listen(5050);
+}).listen();
 
 console.log(`Server started on ${PORT}`);

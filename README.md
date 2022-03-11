@@ -1,10 +1,11 @@
 # Easy-dev-https
 
-Certs not included and but can be generated this way:
+Testing selfsigned certificates for node server to use locally.
+
+Generate cert this way:
 
 ```
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365
-
 ```
 
 I used openssl included with UBUNTU on WSL. Neat. :astronaut:
